@@ -4,6 +4,7 @@ from calculator import Calculator
 
 class CalculatorTest(unittest.TestCase):
 
+    # setUp and tearDown
     def setUp(self):
         self.calc = Calculator()
 
