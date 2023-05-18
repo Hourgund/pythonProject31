@@ -5,7 +5,7 @@ from calculator import Calculator
 class CalculatorTest(unittest.TestCase):
 
     def setUp(self):
-        pass
+        self.calc = Calculator()
 
     def tearDown(self):
         pass
@@ -15,7 +15,7 @@ class CalculatorTest(unittest.TestCase):
         b = 6
         expected = 11
 
-        actual = calc.add(a, b)
+        actual = self.calc.add(a, b)
 
         self.assertEqual(expected, actual)
 
@@ -24,7 +24,7 @@ class CalculatorTest(unittest.TestCase):
         b = 6
         expected = -1
 
-        actual = calc.sub(a, b)
+        actual = self.calc.sub(a, b)
 
         self.assertEqual(expected, actual)
 
@@ -33,7 +33,7 @@ class CalculatorTest(unittest.TestCase):
         b = 6
         expected = 30
 
-        actual = calc.mul(a, b)
+        actual = self.calc.mul(a, b)
 
         self.assertEqual(expected, actual)
 
@@ -42,7 +42,7 @@ class CalculatorTest(unittest.TestCase):
         b = 2
         expected = 3
 
-        actual = calc.div(a, b)
+        actual = self.calc.div(a, b)
 
         self.assertEqual(expected, actual)
 
